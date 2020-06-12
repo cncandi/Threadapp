@@ -21,92 +21,47 @@ namespace Threadapp
             InitializeComponent();
         }
 
-        private void start1_Click(object sender, EventArgs e)
-        {
-            Abfragepunkt1(bfg1);
-        }
+        Thread writeOne, writeTwo;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void writeGouge(BunifuRadialGauge bfg_neutral)
         {
-            Abfragepunkt2(bfg2);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Abfragepunkt3(bfg3);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Thread für erste Abfrage
-            Thread Thread_Erste,Thread_Zweite,Thread_Dritte;
-
-        }
-
-        public static void Erste_Abfrage(BunifuRadialGauge _bfg1)
-        {
-            if (_bfg1.InvokeRequired)
+            if (bfg1.InvokeRequired)
             {
-                _bfg1.BeginInvoke((MethodInvoker)delegate ()
+                bfg1.BeginInvoke((MethodInvoker)delegate ()
                 {
-                    for (int i = 0; i <= 50; i++)
+                    for (int i = 0; i < 100; i++)
                     {
-                        _bfg1.Value = i;
-                        Thread.Sleep(500); //paust 1 Sekunde
-
+                        bfg_neutral.Value = i;
+                        Thread.Sleep(1);
+                        //Application.DoEvents();
                     }
                 });
             }
-        }
-
-        public static void Zweite_Abfrage()
-        {
-            for (int i = 0; i <= 50; i++)
+            else
             {
-
-            }
-        }
-
-        public static void Dritte_Abfrage()
-        {
-            for (int i = 0; i <= 50; i++)
-            {
-
-            }
-        }
-
-        public static void Abfragepunkt1(BunifuRadialGauge _bfg1)
-        {
-            for (int i = 0; i <= 50; i++)
-            {
-                _bfg1.Value = i;
-                Thread.Sleep(500); //paust 1 Sekunde
-                Application.DoEvents(); // Events abarbeiten (damit das UI nicht einfriert)
-            }
-        }
-        public static void Abfragepunkt2(BunifuRadialGauge _bfg2)
-        {
-            for (int i = 0; i <= 50; i++)
-            {
-                _bfg2.Value = i;
-                Thread.Sleep(500); //paust 1 Sekunde
-                Application.DoEvents(); // Events abarbeiten (damit das UI nicht einfriert)
-            }
-        }
-
-        public static void Abfragepunkt3(BunifuRadialGauge _bfg3)
-        {
-            for (int i = 0; i <= 50; i++)
-            {
-                _bfg3.Value = i;
-                Thread.Sleep(500); //paust 1 Sekunde
-                Application.DoEvents(); // Events abarbeiten (damit das UI nicht einfriert)
+                for (int i = 0; i < 100; i++)
+                {
+                    bfg_neutral.Value = i;
+                    Thread.Sleep(1);
+                    //Application.DoEvents();
+                }
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            writeOne = new Thread(() => writeGouge(bfg1));
+            writeTwo = new Thread(() => writeGouge(bfg2));
+
+            writeOne.Start();
+            writeTwo.Start();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
+
+
     }
 }

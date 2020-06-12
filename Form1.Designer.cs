@@ -31,10 +31,6 @@
             this.bfg1 = new Bunifu.UI.WinForms.BunifuRadialGauge();
             this.bfg2 = new Bunifu.UI.WinForms.BunifuRadialGauge();
             this.bfg3 = new Bunifu.UI.WinForms.BunifuRadialGauge();
-            this.start1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -133,45 +129,6 @@
             this.bfg3.ValueByTransition = 0;
             this.bfg3.ValueLabelColor = System.Drawing.Color.Black;
             // 
-            // start1
-            // 
-            this.start1.Location = new System.Drawing.Point(126, 12);
-            this.start1.Name = "start1";
-            this.start1.Size = new System.Drawing.Size(149, 44);
-            this.start1.TabIndex = 6;
-            this.start1.Text = "Start";
-            this.start1.UseVisualStyleBackColor = true;
-            this.start1.Click += new System.EventHandler(this.start1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(512, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 44);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(896, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 44);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1124, 80);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ohne Thread";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button3);
@@ -184,12 +141,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(500, 21);
+            this.button3.Location = new System.Drawing.Point(464, 21);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 44);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Start";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Size = new System.Drawing.Size(140, 39);
+            this.button3.TabIndex = 0;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
@@ -197,11 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 454);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.start1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bfg3);
             this.Controls.Add(this.bfg2);
             this.Controls.Add(this.bfg1);
@@ -219,10 +170,6 @@
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg1;
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg2;
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg3;
-        private System.Windows.Forms.Button start1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button3;
     }
