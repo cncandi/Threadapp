@@ -31,9 +31,7 @@
             this.bfg1 = new Bunifu.UI.WinForms.BunifuRadialGauge();
             this.bfg2 = new Bunifu.UI.WinForms.BunifuRadialGauge();
             this.bfg3 = new Bunifu.UI.WinForms.BunifuRadialGauge();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bfg1
@@ -129,30 +127,22 @@
             this.bfg3.ValueByTransition = 0;
             this.bfg3.ValueLabelColor = System.Drawing.Color.Black;
             // 
-            // groupBox2
+            // button1
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 348);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1124, 77);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "mit Thread";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(464, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 39);
-            this.button3.TabIndex = 0;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(30, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 47);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Klicken erlaubt";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 454);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1154, 362);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bfg3);
             this.Controls.Add(this.bfg2);
             this.Controls.Add(this.bfg1);
@@ -160,7 +150,6 @@
             this.Name = "Form1";
             this.Text = "Thread";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -170,8 +159,7 @@
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg1;
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg2;
         private Bunifu.UI.WinForms.BunifuRadialGauge bfg3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

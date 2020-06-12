@@ -15,47 +15,27 @@ namespace Threadapp
     public partial class Form1 : Form
     {
 
+        public int wartezeit = 120;
 
         public Form1()
         {
             InitializeComponent();
+
+            Thread thread1 = new Thread(work1);
+            Thread thread2 = new Thread(work2);
+            Thread thread3 = new Thread(work3);
+
+            //thread1.Priority= ThreadPriority.Highest;
+            //thread2.Priority = ThreadPriority.Normal;
+            //thread3.Priority = ThreadPriority.Lowest;
+
+
+            // Start Stopped. 
+            thread1.Start();
+            thread2.Start();
+            thread3.Start();
         }
 
-        Thread writeOne, writeTwo;
-
-        private void writeGouge(BunifuRadialGauge bfg_neutral)
-        {
-            if (bfg1.InvokeRequired)
-            {
-                bfg1.BeginInvoke((MethodInvoker)delegate ()
-                {
-                    for (int i = 0; i < 100; i++)
-                    {
-                        bfg_neutral.Value = i;
-                        Thread.Sleep(1);
-                        //Application.DoEvents();
-                    }
-                });
-            }
-            else
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    bfg_neutral.Value = i;
-                    Thread.Sleep(1);
-                    //Application.DoEvents();
-                }
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            writeOne = new Thread(() => writeGouge(bfg1));
-            writeTwo = new Thread(() => writeGouge(bfg2));
-
-            writeOne.Start();
-            writeTwo.Start();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -63,5 +43,37 @@ namespace Threadapp
         }
 
 
+        public async void work1()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                bfg1.Value = i;
+                await Task.Factory.StartNew(() => Thread.Sleep(wartezeit));
+            }
+              
+        }
+
+        public async void work2()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                bfg2.Value = i;
+                await Task.Factory.StartNew(() => Thread.Sleep(wartezeit));
+            }
+        }
+
+        public async void work3()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                bfg3.Value = i;
+                await Task.Factory.StartNew(() => Thread.Sleep(wartezeit));
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Master Thread");
+        }
     }
 }
