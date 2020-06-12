@@ -28,26 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.bfg1 = new Bunifu.UI.WinForms.BunifuRadialGauge();
+            this.bfg2 = new Bunifu.UI.WinForms.BunifuRadialGauge();
+            this.bfg3 = new Bunifu.UI.WinForms.BunifuRadialGauge();
+            this.start1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
+            // 
+            // bfg1
+            // 
+            this.bfg1.AutoGenerateProgressColorWhenHigh = true;
+            this.bfg1.AutoGenerateProgressColorWhenLow = false;
+            this.bfg1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bfg1.LighteningFactor = 70;
+            this.bfg1.Location = new System.Drawing.Point(12, 83);
+            this.bfg1.Margin = new System.Windows.Forms.Padding(6);
+            this.bfg1.Name = "bfg1";
+            this.bfg1.Prefix = "";
+            this.bfg1.ProgressBackColor = System.Drawing.Color.LightBlue;
+            this.bfg1.ProgressBgColor = System.Drawing.Color.LightBlue;
+            this.bfg1.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.bfg1.ProgressColor1 = System.Drawing.Color.DodgerBlue;
+            this.bfg1.ProgressColor2 = System.Drawing.Color.Crimson;
+            this.bfg1.ProgressColorHigh = System.Drawing.Color.Crimson;
+            this.bfg1.ProgressColorLow = System.Drawing.Color.DodgerBlue;
+            this.bfg1.ProgressHighValueMark = 70;
+            this.bfg1.RangeEnd = 100;
+            this.bfg1.RangeLabelsColor = System.Drawing.Color.Black;
+            this.bfg1.RangeStart = 0;
+            this.bfg1.ShowRangeLabels = true;
+            this.bfg1.ShowValueLabel = true;
+            this.bfg1.Size = new System.Drawing.Size(367, 244);
+            this.bfg1.Suffix = "%";
+            this.bfg1.TabIndex = 0;
+            this.bfg1.Thickness = 30;
+            this.bfg1.Value = 30;
+            this.bfg1.ValueByTransition = 30;
+            this.bfg1.ValueLabelColor = System.Drawing.Color.Black;
+            // 
+            // bfg2
+            // 
+            this.bfg2.AutoGenerateProgressColorWhenHigh = true;
+            this.bfg2.AutoGenerateProgressColorWhenLow = false;
+            this.bfg2.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bfg2.LighteningFactor = 70;
+            this.bfg2.Location = new System.Drawing.Point(398, 83);
+            this.bfg2.Margin = new System.Windows.Forms.Padding(6);
+            this.bfg2.Name = "bfg2";
+            this.bfg2.Prefix = "";
+            this.bfg2.ProgressBackColor = System.Drawing.Color.LightBlue;
+            this.bfg2.ProgressBgColor = System.Drawing.Color.LightBlue;
+            this.bfg2.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.bfg2.ProgressColor1 = System.Drawing.Color.DodgerBlue;
+            this.bfg2.ProgressColor2 = System.Drawing.Color.Crimson;
+            this.bfg2.ProgressColorHigh = System.Drawing.Color.Crimson;
+            this.bfg2.ProgressColorLow = System.Drawing.Color.DodgerBlue;
+            this.bfg2.ProgressHighValueMark = 70;
+            this.bfg2.RangeEnd = 100;
+            this.bfg2.RangeLabelsColor = System.Drawing.Color.Black;
+            this.bfg2.RangeStart = 0;
+            this.bfg2.ShowRangeLabels = true;
+            this.bfg2.ShowValueLabel = true;
+            this.bfg2.Size = new System.Drawing.Size(367, 244);
+            this.bfg2.Suffix = "%";
+            this.bfg2.TabIndex = 1;
+            this.bfg2.Thickness = 30;
+            this.bfg2.Value = 30;
+            this.bfg2.ValueByTransition = 30;
+            this.bfg2.ValueLabelColor = System.Drawing.Color.Black;
+            // 
+            // bfg3
+            // 
+            this.bfg3.AutoGenerateProgressColorWhenHigh = true;
+            this.bfg3.AutoGenerateProgressColorWhenLow = false;
+            this.bfg3.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bfg3.LighteningFactor = 70;
+            this.bfg3.Location = new System.Drawing.Point(784, 83);
+            this.bfg3.Margin = new System.Windows.Forms.Padding(6);
+            this.bfg3.Name = "bfg3";
+            this.bfg3.Prefix = "";
+            this.bfg3.ProgressBackColor = System.Drawing.Color.LightBlue;
+            this.bfg3.ProgressBgColor = System.Drawing.Color.LightBlue;
+            this.bfg3.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.bfg3.ProgressColor1 = System.Drawing.Color.DodgerBlue;
+            this.bfg3.ProgressColor2 = System.Drawing.Color.Crimson;
+            this.bfg3.ProgressColorHigh = System.Drawing.Color.Crimson;
+            this.bfg3.ProgressColorLow = System.Drawing.Color.DodgerBlue;
+            this.bfg3.ProgressHighValueMark = 70;
+            this.bfg3.RangeEnd = 100;
+            this.bfg3.RangeLabelsColor = System.Drawing.Color.Black;
+            this.bfg3.RangeStart = 0;
+            this.bfg3.ShowRangeLabels = true;
+            this.bfg3.ShowValueLabel = true;
+            this.bfg3.Size = new System.Drawing.Size(367, 244);
+            this.bfg3.Suffix = "%";
+            this.bfg3.TabIndex = 2;
+            this.bfg3.Thickness = 30;
+            this.bfg3.Value = 30;
+            this.bfg3.ValueByTransition = 30;
+            this.bfg3.ValueLabelColor = System.Drawing.Color.Black;
+            // 
+            // start1
+            // 
+            this.start1.Location = new System.Drawing.Point(126, 12);
+            this.start1.Name = "start1";
+            this.start1.Size = new System.Drawing.Size(149, 44);
+            this.start1.TabIndex = 6;
+            this.start1.Text = "Start";
+            this.start1.UseVisualStyleBackColor = true;
+            this.start1.Click += new System.EventHandler(this.start1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(361, 186);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(512, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(612, 217);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 44);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(896, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 44);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Start";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1124, 44);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ohne Thread";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1154, 351);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.start1);
+            this.Controls.Add(this.bfg3);
+            this.Controls.Add(this.bfg2);
+            this.Controls.Add(this.bfg1);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Thread";
             this.ResumeLayout(false);
@@ -56,7 +190,13 @@
 
         #endregion
 
+        private Bunifu.UI.WinForms.BunifuRadialGauge bfg1;
+        private Bunifu.UI.WinForms.BunifuRadialGauge bfg2;
+        private Bunifu.UI.WinForms.BunifuRadialGauge bfg3;
+        private System.Windows.Forms.Button start1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
